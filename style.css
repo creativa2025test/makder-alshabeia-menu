@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.header {
+    position: relative;
+    height: 380px;
+    /* تصغير ارتفاع الهيدر */
+    overflow: hidden;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    /* ملء الهيدر بالارتفاع الجديد */
+    object-fit: cover;
+    /* جعل الصورة تغطي المساحة بدون تشوه */
+    border-radius: 0 0 20px 20px;
+}
+
+/* ضبط اللوقو ليكون مدمجًا جزئيًا مع الهيدر */
+.logo {
+    position: absolute;
+    top: 280px;
+    /* رفع اللوقو للأعلى */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    /* التأكد أنه فوق كل شيء */
+}
+
+.logo img {
+    width: 320px;
+    /* ضبط حجم الشعار */
+    height: auto;
+}
+
+/* إزاحة النص للأسفل لمنع التداخل مع اللوقو */
+.container h2 {
+    margin-top: 80px;
+    /* تعديل المسافة بين اللوقو والنص */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.social-icons i {
+    font-size: 25px;
+    color: #b01b1b;
+    margin-bottom: 50px;
+}
+
+/* التعديل هنا */
+.categories {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(241, 241, 241, 0.847);
+    /* خلفية شفافة */
+    z-index: 10;
+    /* لضمان عدم التداخل مع العناصر الأخرى */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* لتوفير تأثير ظل بسيط */
+}
+
+.category {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.category img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #b01b1b;
+    object-fit: cover; /* يجعل الصورة تتناسب بشكل جيد داخل الدائرة */
+}
+
+
+
+.menu {
+    background: #e6d3c0;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.menu-item img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.menu-item div {
+    flex-grow: 1;
+    padding: 0 10px;
+    text-align: right;
+}
+
+.price {
+    color: #b01b1b;
+    font-weight: bold;
+}
+
+
+
+
+
+/* زر اللغة */
+.language-dropdown {
+    position: absolute;
+    left: 350px; /* محاذاة الزر إلى الجهة اليسرى */
+    bottom: 250px; /* وضع الزر أسفل الصورة */
+    display: inline-block;
+}
+
+.language-btn {
+    padding: 10px 15px;
+    background-color: #b01b1b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+    border-radius: 5px;
+    text-align: left;
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* استعلام وسائط لشاشات الجوال */
+@media (max-width: 768px) {
+    .language-dropdown {
+        left: 40px; /* تقليص المسافة على الجوال */
+        bottom: 380px; /* تعديل المسافة أسفل الصورة */
+    }
+
+    .language-btn {
+        font-size: 14px; /* تقليص حجم الزر ليكون مناسبًا للشاشة الصغيرة */
+        padding: 8px 12px; /* تقليص حجم الزر */
+    }
+}
+
+/* استعلام وسائط لشاشات أصغر (مثل الهاتف المحمول) */
+@media (max-width: 480px) {
+    .language-dropdown {
+        left: 10px; /* محاذاة الزر إلى الجهة اليسرى على الجوال */
+        bottom: 500px; /* تعديل المسافة أسفل الصورة */
+        z-index: 1000; /* التأكد من أن الزر يبقى فوق العناصر الأخرى */
+    }
+}

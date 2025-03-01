@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو مطعم مقادير الشعبية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+
+        <div class="header">
+            <img src="https://cdn.discordapp.com/attachments/1155238300295118909/1345331133365227611/4.jpg?ex=67c428c1&is=67c2d741&hm=e985b688d8b4ce9a492afa611743824d013bcebc8184667fe646cdc99756d05d&"
+                alt="Header Image">
+        </div>
+        <!-- زر اللغة مع القائمة المنسدلة -->
+        <div class="language-dropdown">
+            <button class="language-btn">🌍 اختر اللغة</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="changeLanguage('ar')">العربية</a>
+                <a href="#" onclick="changeLanguage('en')">English</a>
+            </div>
+        </div>
+
+        <h2 id="branch-name" data-ar="فرع الرياض بارك" data-en="Riyadh Park Branch">مطعم مقادير الشعبية</h2>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="https://maps.app.goo.gl/Z8bEu3KBCwucmieY6" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+        </div>
+
+        <!-- أقسام الطعام هنا ستظل ثابتة -->
+        <div class="categories">
+            <div class="category">
+                <a href=""><img src="test.jpg" alt=""></a>
+                <p>التميس</p>
+            </div>
+            <div class="category">
+                <a href=""><img src="test.jpg" alt=""></a>
+                <p>تاكو</p>
+            </div>
+            <div class="category">
+                <a href=""><img src="test.jpg" alt=""></a>
+                <p>الفطور</p>
+            </div>
+
+        </div>
+
+        <!-- الأصناف (القائمة) -->
+        <div class="menu">
+            <h3>المقبلات</h3>
+            <div class="menu-item">
+                <img src="test.jpg" alt="">
+                <div>
+                    <h4>الزَلَطَة الكلاسيكية</h4>
+                    <p>طماطم عضوية مع البصل تقدم مع خبز التميس</p>
+                </div>
+                <span class="price">15.00 ر.س</span>
+            </div>
+            <div class="menu-item">
+                <img src="test.jpg" alt="">
+                <div>
+                    <h4>سلطة البيت</h4>
+                    <p>بقطع الخيار والطماطم والبصل مع صوص الليمون</p>
+                </div>
+                <span class="price">26.00 ر.س</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://source.unsplash.com/60x60/?fries" alt="">
+                <div>
+                    <h4>البطاطس الحارة الكشنة</h4>
+                    <p>بطاطس مقلية مقرمشة مع صوص الجبن الحار</p>
+                </div>
+                <span class="price">25.00 ر.س</span>
+            </div>
+        </div>
+        <div class="menu">
+            <h3>التميس</h3>
+            <div class="menu-item">
+                <img src="https://source.unsplash.com/60x60/?flatbread" alt="">
+                <div>
+                    <h4>تميس بالجبن</h4>
+                    <p>خبز تميس محشي بالجبن اللذيذ</p>
+                </div>
+                <span class="price">12.00 ر.س</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://source.unsplash.com/60x60/?bread,garlic" alt="">
+                <div>
+                    <h4>تميس بالثوم</h4>
+                    <p>خبز تميس مشبع بنكهة الثوم الشهية</p>
+                </div>
+                <span class="price">14.00 ر.س</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://source.unsplash.com/60x60/?bread,sesame" alt="">
+                <div>
+                    <h4>تميس بالسمسم</h4>
+                    <p>خبز تميس مغطى بحبوب السمسم المقرمشة</p>
+                </div>
+                <span class="price">10.00 ر.س</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
